@@ -19,8 +19,7 @@ Three test cases are implemented:
 - A developing interior layer test case:<br>
 	<img src="https://github.com/ygregw/dealii-sthdg-allatonce/blob/main/misc/int_layer_final.png" width="40%">
 
-The mathematical description of these test problems can be found in **Section 5
-- Numerical Examples** of [our paper](https://arxiv.org/abs/2404.04130).
+The mathematical description of these test problems can be found in **Section 5 - Numerical Examples** of [our paper](https://arxiv.org/abs/2404.04130).
 
 # Setting up deal.II
 
