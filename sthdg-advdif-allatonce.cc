@@ -1372,8 +1372,9 @@ int main(int argc, char** argv)
 	SpaceTimeAdvecDiffuIPH::SpaceTimeHDG<dim>::RefinementMode refinement_mode = SpaceTimeAdvecDiffuIPH::SpaceTimeHDG<dim>::uniform_refinement;
 	bool ifoutput = false;
 
-	// Three command line options accepted:
-	// n (nu), c (cycle), p (polynomial order) and a (switch to amr)
+	// Five command line options accepted:
+	// n (nu), c (cycle), p (polynomial order), 
+	// a (toggle on amr mode) and o (toggle on vtu generation)
 	while ( (opt = getopt(argc, argv, "n:c:p:ao")) != -1 ) {
 		switch ( opt ) {
 			case 'n':
