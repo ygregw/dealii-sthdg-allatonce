@@ -8,6 +8,24 @@ This repository contains [deal.II](https://dealii.org/) codes that implement:
 - using adaptive mesh refinement;
 - using the all-at-once approach.
 
+## Demos
+
+Three test cases are implemented:
+
+- A rotating Gaussian pulse test case;
+	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/rot_pulse_01.png" width="40%">
+	<br>
+	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/rot_pulse_02.png" width="40%">
+	<br>
+	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/rot_pulse_03.png" width="40%">
+- A developing boundary layer test case;
+	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/bnd_layer_final.png" width="40%">
+- A developing interior layer test case.
+	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/int_layer_final.png" width="40%">
+
+The mathematical description of these test problems can be found in **Section 5
+- Numerical Examples** of [our paper](https://arxiv.org/abs/2404.04130).
+
 # Setting up deal.II
 
 GCC14 was released in May 2024 and my personal machine (running
@@ -125,3 +143,32 @@ $ cmake \
 $ # after successful configuration
 $ make --jobs=N install # specify number of jobs based on specs of your machine
 ```
+
+# Running the space-time HDG code
+
+Make sure you are in the base directory of this git repo. Then, create `build`
+, `build/vtus_uniform` and `build/vtus_adaptive` directories. The `vtus_*`
+directories stores the VTK output files (to be visualized by softwares like
+ParaView or VisIt).
+
+```shell
+$ basename $PWD # you should see "dealii-sthdg-allatonce"
+$ mkdir -p build/vtus_uniform build/vtus_adaptive
+```
+
+Now configure and compile the code.
+
+```shell
+$ cd build
+$ cmake ..
+$ make
+```
+
+When successful, you should obtain executable `sthdg-advdif-slabbyslab`. It
+takes five commandline options:
+
+2. `-n N`: sets diffusion parameter to be 10^{-N};
+3. `-c N`: sets N uniform refinement cycles;
+4. `-p N`: uses finite elements of polynomial degree N;
+1. `-a`: toggles amr mode on;
+1. `-o`: toggles vtu output on.
