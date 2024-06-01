@@ -12,16 +12,12 @@ This repository contains [deal.II](https://dealii.org/) codes that implement:
 
 Three test cases are implemented:
 
-- A rotating Gaussian pulse test case;
-	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/rot_pulse_01.png" width="40%">
-	<br>
-	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/rot_pulse_02.png" width="40%">
-	<br>
-	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/rot_pulse_03.png" width="40%">
-- A developing boundary layer test case;
-	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/bnd_layer_final.png" width="40%">
-- A developing interior layer test case.
-	<img src="https://github.com/ygregw/dealii-sthdg-slabbyslab/blob/main/misc/int_layer_final.png" width="40%">
+- A rotating Gaussian pulse test case;<br>
+	<img src="https://github.com/ygregw/dealii-sthdg-allatonce/blob/main/misc/rot_pulse_03.png" width="40%">
+- A developing boundary layer test case;<br>
+	<img src="https://github.com/ygregw/dealii-sthdg-allatonce/blob/main/misc/bnd_layer_final.png" width="40%">
+- A developing interior layer test case:<br>
+	<img src="https://github.com/ygregw/dealii-sthdg-allatonce/blob/main/misc/int_layer_final.png" width="40%">
 
 The mathematical description of these test problems can be found in **Section 5
 - Numerical Examples** of [our paper](https://arxiv.org/abs/2404.04130).
@@ -164,7 +160,7 @@ $ cmake ..
 $ make
 ```
 
-When successful, you should obtain executable `sthdg-advdif-slabbyslab`. It
+When successful, you should obtain executable `sthdg-advdif-allatonce`. It
 takes five commandline options:
 
 2. `-n N`: sets diffusion parameter to be 10^{-N};
