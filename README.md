@@ -171,9 +171,10 @@ takes five commandline options:
 
 ## Example runs
 
+**Boundary layer problem**:\
 After compiling with the boundary layer problem, we run with 10^{-3} being the
 diffusion parameter, 4 mpi processes, linear polynomial as the finite elements
-and with AMR:
+and with AMR.
 
 ```shell
 $ mpiexec -n 4 ./sthdg-advdif-allatonce -n 3 -c 4 -p 1 -a | tee bnd_n3c4p1.txt
@@ -253,6 +254,7 @@ cells  dofs       L2            sH1           tH1          dfjp          adjp   
 +---------------------------------+-----------+------------+------------+
 ```
 
+**Interior layer problem**:\
 After compiling with the interior layer problem, we run with 10^{-3} being the
 diffusion parameter, 4 mpi processes, linear polynomial as the finite elements
 and with AMR:
